@@ -15,6 +15,9 @@
 		488C8B2D23EA4649006FED69 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 488C8B2C23EA4649006FED69 /* Home.storyboard */; };
 		488C8B2F23EA4669006FED69 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488C8B2E23EA4669006FED69 /* HomeViewModel.swift */; };
 		488C8B3223EA4697006FED69 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488C8B3123EA4697006FED69 /* HomeViewController.swift */; };
+		488C8B3723EA5D1C006FED69 /* MoviesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 488C8B3623EA5D1C006FED69 /* MoviesCollectionViewCell.xib */; };
+		488C8B3923EA5F42006FED69 /* MoviesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488C8B3823EA5F42006FED69 /* MoviesCollectionViewCell.swift */; };
+		488C8B3B23EA638F006FED69 /* TopRatedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488C8B3A23EA638F006FED69 /* TopRatedCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		488C8B2C23EA4649006FED69 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		488C8B2E23EA4669006FED69 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		488C8B3123EA4697006FED69 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		488C8B3623EA5D1C006FED69 /* MoviesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesCollectionViewCell.xib; sourceTree = "<group>"; };
+		488C8B3823EA5F42006FED69 /* MoviesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCollectionViewCell.swift; sourceTree = "<group>"; };
+		488C8B3A23EA638F006FED69 /* TopRatedCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		488C8AB123EA24A3006FED69 /* FastMovies */ = {
 			isa = PBXGroup;
 			children = (
+				488C8AC023EA24A8006FED69 /* Info.plist */,
 				488C8B3323EA46B4006FED69 /* AppDelegate */,
 				488C8B2B23EA45B6006FED69 /* Resources */,
 				488C8B2623EA4523006FED69 /* Home */,
@@ -162,6 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				488C8B2C23EA4649006FED69 /* Home.storyboard */,
+				488C8B3623EA5D1C006FED69 /* MoviesCollectionViewCell.xib */,
+				488C8B3823EA5F42006FED69 /* MoviesCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -169,7 +178,6 @@
 		488C8B2B23EA45B6006FED69 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				488C8AC023EA24A8006FED69 /* Info.plist */,
 				488C8ABB23EA24A8006FED69 /* Assets.xcassets */,
 				488C8ABD23EA24A8006FED69 /* LaunchScreen.storyboard */,
 			);
@@ -180,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				488C8B3123EA4697006FED69 /* HomeViewController.swift */,
+				488C8B3A23EA638F006FED69 /* TopRatedCollectionViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -299,6 +308,7 @@
 				488C8ABF23EA24A8006FED69 /* LaunchScreen.storyboard in Resources */,
 				488C8ABC23EA24A8006FED69 /* Assets.xcassets in Resources */,
 				488C8B2D23EA4649006FED69 /* Home.storyboard in Resources */,
+				488C8B3723EA5D1C006FED69 /* MoviesCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,8 +334,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				488C8B3223EA4697006FED69 /* HomeViewController.swift in Sources */,
+				488C8B3B23EA638F006FED69 /* TopRatedCollectionViewController.swift in Sources */,
 				488C8AB323EA24A3006FED69 /* AppDelegate.swift in Sources */,
 				488C8B2F23EA4669006FED69 /* HomeViewModel.swift in Sources */,
+				488C8B3923EA5F42006FED69 /* MoviesCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
