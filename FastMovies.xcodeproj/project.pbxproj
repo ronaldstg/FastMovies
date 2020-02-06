@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4802399023EC96D400023558 /* PopularCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4802398F23EC96D400023558 /* PopularCollectionViewController.swift */; };
 		488C8AB323EA24A3006FED69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488C8AB223EA24A3006FED69 /* AppDelegate.swift */; };
 		488C8ABC23EA24A8006FED69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 488C8ABB23EA24A8006FED69 /* Assets.xcassets */; };
 		488C8ABF23EA24A8006FED69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 488C8ABD23EA24A8006FED69 /* LaunchScreen.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4802398F23EC96D400023558 /* PopularCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewController.swift; sourceTree = "<group>"; };
 		488C8AAF23EA24A3006FED69 /* FastMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		488C8AB223EA24A3006FED69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		488C8ABB23EA24A8006FED69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			children = (
 				488C8B3123EA4697006FED69 /* HomeViewController.swift */,
 				488C8B3A23EA638F006FED69 /* TopRatedCollectionViewController.swift */,
+				4802398F23EC96D400023558 /* PopularCollectionViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4802399023EC96D400023558 /* PopularCollectionViewController.swift in Sources */,
 				488C8B3223EA4697006FED69 /* HomeViewController.swift in Sources */,
 				488C8B3B23EA638F006FED69 /* TopRatedCollectionViewController.swift in Sources */,
 				488C8AB323EA24A3006FED69 /* AppDelegate.swift in Sources */,

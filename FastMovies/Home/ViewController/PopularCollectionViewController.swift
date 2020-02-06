@@ -1,26 +1,23 @@
 //
-//  TopRatedCollectionViewController.swift
+//  PopularCollectionViewController.swift
 //  FastMovies
 //
-//  Created by Ronald on 04/02/20.
+//  Created by Ronald on 06/02/20.
 //  Copyright © 2020 ronald. All rights reserved.
 //
 
 import UIKit
 
-class TopRatedCollectionViewController: UIViewController {
+class PopularCollectionViewController: UIViewController {
 
-    @IBOutlet weak var topRatedCollectionView: UICollectionView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
     
-    
 }
 
-private extension TopRatedCollectionViewController {
+private extension PopularCollectionViewController {
         
     // TODO: bind collectionView and display cells
     private func bind() {
@@ -28,4 +25,3 @@ private extension TopRatedCollectionViewController {
     }
 
 }
-

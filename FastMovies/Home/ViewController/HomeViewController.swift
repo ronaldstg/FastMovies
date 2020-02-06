@@ -9,11 +9,22 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
+    @IBOutlet weak var topRatedMoviesView: UIView!
+    @IBOutlet weak var popularMoviesView: UIView!
+    
+    var topRatedCollectionViewController: TopRatedCollectionViewController!
+    var popularMoviesCollectionViewController: PopularCollectionViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
+}
 
-
+extension HomeViewController {
+    
+    func bind() {
+        
+    }
 }
