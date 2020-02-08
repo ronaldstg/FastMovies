@@ -30,9 +30,9 @@
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g75-hb-0NK">
-                                <rect key="frame" x="0.0" y="146" width="414" height="250"/>
+                                <rect key="frame" x="0.0" y="146" width="414" height="350"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="POJ-nV-vYO"/>
+                                    <constraint firstAttribute="height" constant="350" id="POJ-nV-vYO"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="HSg-Bt-CUt" kind="embed" id="V3D-iH-Jbf"/>
@@ -55,7 +55,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzP-qB-Eb6" userLabel="Top Rated Section View">
-                                <rect key="frame" x="0.0" y="396" width="414" height="54"/>
+                                <rect key="frame" x="0.0" y="496" width="414" height="54"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Popular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPp-My-og7">
                                         <rect key="frame" x="8" y="17" width="65" height="23"/>
@@ -72,7 +72,7 @@
                                 <viewLayoutGuide key="safeArea" id="1Ec-JC-Blg"/>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DD0-Lc-Jev">
-                                <rect key="frame" x="0.0" y="450" width="414" height="250"/>
+                                <rect key="frame" x="0.0" y="550" width="414" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="6Pg-Sf-f1P"/>
                                 </constraints>
@@ -81,7 +81,7 @@
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ktc-RK-vkM" userLabel="Top Rated Section View">
-                                <rect key="frame" x="0.0" y="699" width="414" height="54"/>
+                                <rect key="frame" x="0.0" y="799" width="414" height="54"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quick Links" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFk-0w-n2X">
                                         <rect key="frame" x="8" y="17" width="98" height="23"/>
@@ -145,14 +145,14 @@
             <objects>
                 <viewController storyboardIdentifier="TopRatedCollectionViewController" id="HSg-Bt-CUt" customClass="TopRatedCollectionViewController" customModule="FastMovies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dLh-wz-Z3n">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KEZ-rA-rm7">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nHC-7z-mUV">
-                                    <size key="itemSize" width="50" height="50"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TFg-Up-LOV">
+                                    <size key="itemSize" width="150" height="350"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -169,6 +169,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="70W-J4-DVg"/>
                     </view>
+                    <connections>
+                        <outlet property="topRatedCollectionView" destination="KEZ-rA-rm7" id="MKo-BV-puk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cMP-yP-SKL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -203,6 +206,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fq8-So-rcm"/>
                     </view>
+                    <connections>
+                        <outlet property="popularCollectionView" destination="RHp-bu-uXC" id="RhO-UU-jEV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OYL-Sg-BWc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

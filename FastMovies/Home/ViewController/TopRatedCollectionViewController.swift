@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class TopRatedCollectionViewController: UIViewController {
 
     @IBOutlet weak var topRatedCollectionView: UICollectionView!
     
+    public var movies = PublishSubject<[Movie]>()
+    private let disposeBag = DisposeBag()
+       
     override func viewDidLoad() {
         super.viewDidLoad()
 

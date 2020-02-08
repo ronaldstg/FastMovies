@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class HomeViewController: UIViewController {
     
@@ -15,6 +17,9 @@ class HomeViewController: UIViewController {
     
     var topRatedCollectionViewController: TopRatedCollectionViewController!
     var popularMoviesCollectionViewController: PopularCollectionViewController!
+    
+    var homeViewModel = HomeViewModel()
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()

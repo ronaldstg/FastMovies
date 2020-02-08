@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
+
+class HomeViewModel {
+    
+    public let topRatedMovies : PublishSubject<[Movie]> = PublishSubject()
+    public let popularMovies : PublishSubject<[Movie]> = PublishSubject()
+    
+    public func request() {
+    }
+}
