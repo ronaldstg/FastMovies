@@ -20,15 +20,20 @@ class PopularCollectionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        bind()
     }
     
 }
 
 private extension PopularCollectionViewController {
         
-    // TODO: bind collectionView and display cells
     private func bind() {
+        
+        popularCollectionView.register(UINib(nibName: "MoviesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: String(describing: MoviesCollectionViewCell.self))
+        
+        movies.bind(to: popularCollectionView.rx.items(cellIdentifier: "MoviesCollectionViewCell", cellType: MoviesCollectionViewCell.self)) { (row, album, cell) in
+            cell.titleLabel.text = "TITULO"
+        }.disposed(by: disposeBag)
         
     }
 

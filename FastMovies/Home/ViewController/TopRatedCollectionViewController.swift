@@ -19,7 +19,7 @@ class TopRatedCollectionViewController: UIViewController {
        
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        bind()
     }
     
     
@@ -27,10 +27,13 @@ class TopRatedCollectionViewController: UIViewController {
 
 private extension TopRatedCollectionViewController {
         
-    // TODO: bind collectionView and display cells
     private func bind() {
         
+        topRatedCollectionView.register(UINib(nibName: "MoviesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: String(describing: MoviesCollectionViewCell.self))
+        
+        movies.bind(to: topRatedCollectionView.rx.items(cellIdentifier: "MoviesCollectionViewCell", cellType: MoviesCollectionViewCell.self)) { (row, album, cell) in
+            cell.titleLabel.text = "TITULO"
+        }.disposed(by: disposeBag)
     }
-
 }
 
