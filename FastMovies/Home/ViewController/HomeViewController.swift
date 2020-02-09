@@ -63,7 +63,7 @@ extension HomeViewController {
 
         
         // Mocking data for testing
-        let movies:[Movie] = [Movie(id: "1", poster_path: "www/www", overview: "lalala"),Movie(id: "1", poster_path: "www/www", overview: "lalala"),Movie(id: "1", poster_path: "www/www", overview: "lalala")]
+        let movies:[Movie] = [Movie(id: "1", original_title: "Ad Astra", poster_path: "/xBHvZcjRiWyobQ9kxBhO6B2dtRI.jpg", overview: "Lorem Ipsum"), Movie(id: "1", original_title: "Birds of Prey", poster_path: "/uozb2VeD87YmhoUP1RrGWfzuCrr.jpg", overview: "Lorem Ipsum")];
         
         homeViewModel.topRatedMovies.onNext(movies)
         homeViewModel.popularMovies.onNext(movies)

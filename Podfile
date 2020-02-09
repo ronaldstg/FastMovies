@@ -9,6 +9,7 @@ target 'FastMovies' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'SwiftyJSON'
+  pod 'AlamofireImage', '~> 3.5'
 
   target 'FastMoviesTests' do
     inherit! :search_paths

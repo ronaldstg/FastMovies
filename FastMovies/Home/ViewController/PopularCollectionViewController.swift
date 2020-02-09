@@ -31,8 +31,8 @@ private extension PopularCollectionViewController {
         
         popularCollectionView.register(UINib(nibName: "MoviesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: String(describing: MoviesCollectionViewCell.self))
         
-        movies.bind(to: popularCollectionView.rx.items(cellIdentifier: "MoviesCollectionViewCell", cellType: MoviesCollectionViewCell.self)) { (row, album, cell) in
-            cell.titleLabel.text = "TITULO"
+        movies.bind(to: popularCollectionView.rx.items(cellIdentifier: "MoviesCollectionViewCell", cellType: MoviesCollectionViewCell.self)) { (row, movie, cell) in
+            cell.movie = movie
         }.disposed(by: disposeBag)
         
     }
