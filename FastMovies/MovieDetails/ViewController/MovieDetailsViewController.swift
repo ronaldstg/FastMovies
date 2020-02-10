@@ -32,8 +32,6 @@ class MovieDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // URL for backdrop image tests
-        // https://image.tmdb.org/t/p/w500/5BwqwxMEjeFtdknRV792Svo0K1v.jpg
         bind()
         
         let movie = Movie(id: "1", original_title: "Ad Astra", poster_path: "/xBHvZcjRiWyobQ9kxBhO6B2dtRI.jpg", backdrop_path: "/5BwqwxMEjeFtdknRV792Svo0K1v.jpg", overview: "Lorem Ipsum")
@@ -67,12 +65,8 @@ extension MovieDetailsViewController {
                 }
                 
                 self.movieTitleLabel.text = movie.original_title
-                
-                
         }.disposed(by: disposeBag)
-        
     }
-
 }
 
 extension UIViewController {
