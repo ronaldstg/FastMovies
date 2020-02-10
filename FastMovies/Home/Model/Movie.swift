@@ -10,11 +10,14 @@ import Foundation
 
 struct Movie: Codable {
     
-    let id, original_title, poster_path, backdrop_path, overview: String
+    let id: Int
+    let original_title, poster_path, backdrop_path, overview: String
 
     enum CodingKeys: String, CodingKey {
-        case id, original_title, poster_path, backdrop_path, overview
+        case id
+        case original_title, poster_path, backdrop_path, overview
     }
+    
 }
 
 extension Movie {
