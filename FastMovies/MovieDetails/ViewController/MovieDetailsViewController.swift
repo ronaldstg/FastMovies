@@ -10,6 +10,8 @@ import UIKit
 
 class MovieDetailsViewController: UIViewController {
     
+    var movieId:String!
+    
     @objc class func newInstanceFromStoryboard() -> MovieDetailsViewController {
         let viewController = MovieDetailsViewController.instantiate(viewControllerOfType: MovieDetailsViewController.self, storyboardName: "MovieDetails")
         
@@ -18,7 +20,10 @@ class MovieDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // URL for backdrop image tests
+        // https://image.tmdb.org/t/p/w500/5BwqwxMEjeFtdknRV792Svo0K1v.jpg
+        
     }
     
 }

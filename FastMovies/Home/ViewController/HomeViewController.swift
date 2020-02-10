@@ -67,9 +67,9 @@ extension HomeViewController {
         
         homeViewModel
             .selectedMovie
-            .bind { (target) in
-                print(target)
+            .bind { (movieId) in
                 let controller = MovieDetailsViewController.newInstanceFromStoryboard()
+                controller.movieId = movieId
                 self.navigationController?.pushViewController(controller, animated: true)
         }.disposed(by: disposeBag)
             
