@@ -66,6 +66,8 @@ extension MovieDetailsViewController {
                     }
                 }
                 
+                self.movieTitleLabel.text = movie.original_title
+                
                 
         }.disposed(by: disposeBag)
         
