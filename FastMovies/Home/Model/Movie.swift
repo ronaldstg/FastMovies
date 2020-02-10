@@ -10,10 +10,10 @@ import Foundation
 
 struct Movie: Codable {
     
-    let id, original_title, poster_path, overview: String
+    let id, original_title, poster_path, backdrop_path, overview: String
 
     enum CodingKeys: String, CodingKey {
-        case id, original_title, poster_path, overview
+        case id, original_title, poster_path, backdrop_path, overview
     }
 }
 

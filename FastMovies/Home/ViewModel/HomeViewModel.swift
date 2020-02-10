@@ -14,6 +14,7 @@ class HomeViewModel {
     
     public let topRatedMovies : PublishSubject<[Movie]> = PublishSubject()
     public let popularMovies : PublishSubject<[Movie]> = PublishSubject()
+    public let selectedMovie: PublishSubject<String> = PublishSubject()
     
     public func request() {
     }

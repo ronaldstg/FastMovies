@@ -15,6 +15,7 @@ class PopularCollectionViewController: UIViewController {
     
     @IBOutlet weak var popularCollectionView: UICollectionView!
     
+    public var homeViewModel:HomeViewModel!
     public var movies = PublishSubject<[Movie]>()
     private let disposeBag = DisposeBag()
 
@@ -34,6 +35,13 @@ private extension PopularCollectionViewController {
         movies.bind(to: popularCollectionView.rx.items(cellIdentifier: "MoviesCollectionViewCell", cellType: MoviesCollectionViewCell.self)) { (row, movie, cell) in
             cell.movie = movie
         }.disposed(by: disposeBag)
+        
+        popularCollectionView.rx.modelSelected(Movie.self)
+        .subscribe(onNext: { [weak self] item in
+            print(item.original_title)
+            self?.homeViewModel.selectedMovie.onNext(item.id)
+            
+        }).disposed(by: disposeBag)
         
     }
 

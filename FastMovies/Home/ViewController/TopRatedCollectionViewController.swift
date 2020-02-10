@@ -14,6 +14,7 @@ class TopRatedCollectionViewController: UIViewController {
 
     @IBOutlet weak var topRatedCollectionView: UICollectionView!
     
+    public var homeViewModel:HomeViewModel!
     public var movies = PublishSubject<[Movie]>()
     private let disposeBag = DisposeBag()
        
@@ -34,6 +35,14 @@ private extension TopRatedCollectionViewController {
         movies.bind(to: topRatedCollectionView.rx.items(cellIdentifier: "MoviesCollectionViewCell", cellType: MoviesCollectionViewCell.self)) { (row, movie, cell) in
             cell.movie = movie
         }.disposed(by: disposeBag)
+        
+        topRatedCollectionView.rx.modelSelected(Movie.self)
+        .subscribe(onNext: { [weak self] item in
+            print(item.original_title)
+            self?.homeViewModel.selectedMovie.onNext(item.id)
+            
+        }).disposed(by: disposeBag)
+        
     }
 }
 
