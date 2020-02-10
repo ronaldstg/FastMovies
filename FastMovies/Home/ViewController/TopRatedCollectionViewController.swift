@@ -38,9 +38,7 @@ private extension TopRatedCollectionViewController {
         
         topRatedCollectionView.rx.modelSelected(Movie.self)
         .subscribe(onNext: { [weak self] item in
-            print(item.original_title)
             self?.homeViewModel.selectedMovie.onNext(item.id)
-            
         }).disposed(by: disposeBag)
         
     }

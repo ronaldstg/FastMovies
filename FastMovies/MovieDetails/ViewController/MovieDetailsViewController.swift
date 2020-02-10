@@ -14,7 +14,7 @@ import AlamofireImage
 
 class MovieDetailsViewController: UIViewController {
     
-    var movieId:String!
+    var movieId:Int!
     @IBOutlet weak var backdropImageView: UIImageView!
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var movieTitleLabel: UILabel!
@@ -33,9 +33,7 @@ class MovieDetailsViewController: UIViewController {
         super.viewDidLoad()
         
         bind()
-        
-        let movie = Movie(id: "1", original_title: "Ad Astra", poster_path: "/xBHvZcjRiWyobQ9kxBhO6B2dtRI.jpg", backdrop_path: "/5BwqwxMEjeFtdknRV792Svo0K1v.jpg", overview: "Lorem Ipsum")
-        movieDetailsViewModel.movie.onNext(movie)
+        movieDetailsViewModel.request(selectedId: String(movieId))
     }
     
 }

@@ -9,6 +9,7 @@ target 'FastMovies' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'SwiftyJSON'
+  pod 'Alamofire', '~> 4.8'
   pod 'AlamofireImage', '~> 3.5'
 
   target 'FastMoviesTests' do

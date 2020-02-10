@@ -218,7 +218,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RHp-bu-uXC">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RHp-bu-uXC">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ufd-f7-skS">
@@ -235,7 +235,7 @@
                             <constraint firstItem="RHp-bu-uXC" firstAttribute="trailing" secondItem="fq8-So-rcm" secondAttribute="trailing" id="Zdh-FG-Gpu"/>
                             <constraint firstItem="RHp-bu-uXC" firstAttribute="leading" secondItem="fq8-So-rcm" secondAttribute="leading" id="pRH-M8-6oc"/>
                             <constraint firstItem="RHp-bu-uXC" firstAttribute="bottom" secondItem="fq8-So-rcm" secondAttribute="bottom" id="xBW-lk-2Ew"/>
-                            <constraint firstItem="RHp-bu-uXC" firstAttribute="top" secondItem="fq8-So-rcm" secondAttribute="top" id="xZh-VO-7ch"/>
+                            <constraint firstItem="RHp-bu-uXC" firstAttribute="top" secondItem="fq8-So-rcm" secondAttribute="top" constant="-44" id="xZh-VO-7ch"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fq8-So-rcm"/>
                     </view>

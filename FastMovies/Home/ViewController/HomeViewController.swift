@@ -45,6 +45,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bind()
+        homeViewModel.request()
     }
 }
 
@@ -72,15 +73,6 @@ extension HomeViewController {
                 controller.movieId = movieId
                 self.navigationController?.pushViewController(controller, animated: true)
         }.disposed(by: disposeBag)
-            
-        
-        // Mocking data for testing
-        let movies:[Movie] = [Movie(id: "1", original_title: "Ad Astra", poster_path: "/xBHvZcjRiWyobQ9kxBhO6B2dtRI.jpg", backdrop_path: "", overview: "Lorem Ipsum"), Movie(id: "1", original_title: "Birds of Prey", poster_path: "/uozb2VeD87YmhoUP1RrGWfzuCrr.jpg", backdrop_path: "", overview: "Lorem Ipsum")];
-        
-        homeViewModel.topRatedMovies.onNext(movies)
-        homeViewModel.popularMovies.onNext(movies)
-        
-        
     }
 }
 
