@@ -7,8 +7,12 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 class MovieDetailsViewModel {
+    
+    public var movie = PublishSubject<Movie>()
     
     public func request() {
         

@@ -16,25 +16,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="folder.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SHs-iI-0qN">
-                                <rect key="frame" x="0.0" y="88" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="89" width="414" height="216"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="218.5" id="e09-PQ-mCf"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Gt-xS-9Cz">
-                                <rect key="frame" x="0.0" y="315.5" width="414" height="220"/>
+                                <rect key="frame" x="0.0" y="316.5" width="414" height="220"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XgY-h7-78T">
                                         <rect key="frame" x="0.0" y="0.0" width="148" height="220"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gHT-dy-rW3">
-                                                <rect key="frame" x="20" y="-0.5" width="128" height="219"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gHT-dy-rW3">
+                                                <rect key="frame" x="20" y="-0.5" width="128" height="180"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="gHT-dy-rW3" firstAttribute="leading" secondItem="XgY-h7-78T" secondAttribute="leading" constant="20" id="4zL-3Y-QlO"/>
-                                            <constraint firstAttribute="bottom" secondItem="gHT-dy-rW3" secondAttribute="bottom" id="At3-t1-ugE"/>
+                                            <constraint firstAttribute="bottom" secondItem="gHT-dy-rW3" secondAttribute="bottom" constant="39" id="At3-t1-ugE"/>
                                             <constraint firstItem="gHT-dy-rW3" firstAttribute="top" secondItem="XgY-h7-78T" secondAttribute="top" id="aey-wm-HuN"/>
                                             <constraint firstAttribute="trailing" secondItem="gHT-dy-rW3" secondAttribute="trailing" id="jV1-6D-VNd"/>
                                         </constraints>
@@ -43,12 +43,12 @@
                                         <rect key="frame" x="148" y="0.0" width="130" height="220"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STg-Xb-eXT">
-                                                <rect key="frame" x="10" y="10" width="120" height="20.5"/>
+                                                <rect key="frame" x="10" y="10" width="120" height="21.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="Zsx-uG-pNW"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -62,16 +62,89 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ik0-5J-Xbx">
                                         <rect key="frame" x="278" y="0.0" width="136" height="220"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdf-A2-4Gk">
-                                                <rect key="frame" x="20" y="20" width="106" height="30"/>
-                                                <state key="normal" title="Button"/>
-                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nya-rd-ly9" customClass="BorderView" customModule="FastMovies" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="126" height="48"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdf-A2-4Gk">
+                                                        <rect key="frame" x="14" y="9" width="98" height="30"/>
+                                                        <state key="normal" title="R$ 44.90 BUY"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="FEc-rE-Obu"/>
+                                                    <constraint firstItem="jdf-A2-4Gk" firstAttribute="centerY" secondItem="nya-rd-ly9" secondAttribute="centerY" id="J4d-Mw-M60"/>
+                                                    <constraint firstItem="jdf-A2-4Gk" firstAttribute="centerX" secondItem="nya-rd-ly9" secondAttribute="centerX" id="u6K-YI-lc0"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOo-ae-8bK" customClass="BorderView" customModule="FastMovies" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="58" width="126" height="48"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5Y-Gm-sOJ">
+                                                        <rect key="frame" x="14.5" y="9" width="97" height="30"/>
+                                                        <state key="normal" title="R$ 4.90 RENT"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="2hN-1J-pck"/>
+                                                    <constraint firstItem="A5Y-Gm-sOJ" firstAttribute="centerY" secondItem="aOo-ae-8bK" secondAttribute="centerY" id="GgJ-af-K3J"/>
+                                                    <constraint firstItem="A5Y-Gm-sOJ" firstAttribute="centerX" secondItem="aOo-ae-8bK" secondAttribute="centerX" id="OxD-pD-J23"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="jdf-A2-4Gk" secondAttribute="trailing" constant="10" id="UIb-aT-GCd"/>
-                                            <constraint firstItem="jdf-A2-4Gk" firstAttribute="top" secondItem="ik0-5J-Xbx" secondAttribute="top" constant="20" id="YG0-b6-keS"/>
-                                            <constraint firstItem="jdf-A2-4Gk" firstAttribute="leading" secondItem="ik0-5J-Xbx" secondAttribute="leading" constant="20" id="fhu-FZ-tec"/>
+                                            <constraint firstItem="nya-rd-ly9" firstAttribute="leading" secondItem="ik0-5J-Xbx" secondAttribute="leading" id="5bP-aU-c9N"/>
+                                            <constraint firstItem="aOo-ae-8bK" firstAttribute="leading" secondItem="nya-rd-ly9" secondAttribute="leading" id="6kN-DW-Pqy"/>
+                                            <constraint firstItem="nya-rd-ly9" firstAttribute="top" secondItem="ik0-5J-Xbx" secondAttribute="top" id="9ZJ-0v-DJM"/>
+                                            <constraint firstAttribute="trailing" secondItem="nya-rd-ly9" secondAttribute="trailing" constant="10" id="9ZW-U3-105"/>
+                                            <constraint firstAttribute="trailing" secondItem="aOo-ae-8bK" secondAttribute="trailing" constant="10" id="fRa-If-Ja2"/>
+                                            <constraint firstItem="aOo-ae-8bK" firstAttribute="top" secondItem="nya-rd-ly9" secondAttribute="bottom" constant="10" id="wy1-hH-w47"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -90,19 +163,35 @@
                                     <constraint firstItem="ik0-5J-Xbx" firstAttribute="leading" secondItem="WCm-5V-WHJ" secondAttribute="trailing" id="wG1-Gc-Din"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ru-27-i42">
+                                <rect key="frame" x="20" y="505" width="374" height="1"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="qu7-bD-C5B"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="s6y-9x-Srq" firstAttribute="top" secondItem="SHs-iI-0qN" secondAttribute="top" constant="1" id="1kD-ax-z6t"/>
+                            <constraint firstItem="s6y-9x-Srq" firstAttribute="top" secondItem="SHs-iI-0qN" secondAttribute="top" id="1kD-ax-z6t"/>
                             <constraint firstItem="s6y-9x-Srq" firstAttribute="trailing" secondItem="SHs-iI-0qN" secondAttribute="trailing" id="67X-BE-ZHp"/>
                             <constraint firstItem="SHs-iI-0qN" firstAttribute="leading" secondItem="s6y-9x-Srq" secondAttribute="leading" id="FNC-5P-d6x"/>
                             <constraint firstItem="3Gt-xS-9Cz" firstAttribute="top" secondItem="SHs-iI-0qN" secondAttribute="bottom" constant="10" id="GI4-rA-wKy"/>
+                            <constraint firstItem="2ru-27-i42" firstAttribute="top" secondItem="3Gt-xS-9Cz" secondAttribute="bottom" constant="-31.5" id="NmC-DS-gj3"/>
+                            <constraint firstItem="2ru-27-i42" firstAttribute="leading" secondItem="s6y-9x-Srq" secondAttribute="leading" constant="20" id="UYp-W3-liW"/>
                             <constraint firstItem="s6y-9x-Srq" firstAttribute="trailing" secondItem="3Gt-xS-9Cz" secondAttribute="trailing" id="V2T-GT-rC0"/>
                             <constraint firstItem="3Gt-xS-9Cz" firstAttribute="leading" secondItem="s6y-9x-Srq" secondAttribute="leading" id="vDL-bg-iTU"/>
+                            <constraint firstItem="s6y-9x-Srq" firstAttribute="trailing" secondItem="2ru-27-i42" secondAttribute="trailing" constant="20" id="xfs-9p-W7l"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="s6y-9x-Srq"/>
                     </view>
                     <navigationItem key="navigationItem" title="Details" id="FTc-bU-9NH"/>
+                    <connections>
+                        <outlet property="backdropImageView" destination="SHs-iI-0qN" id="dsq-hf-ROj"/>
+                        <outlet property="buyButton" destination="jdf-A2-4Gk" id="PbH-nV-mpY"/>
+                        <outlet property="movieTitleLabel" destination="STg-Xb-eXT" id="yat-3a-qYH"/>
+                        <outlet property="posterImageView" destination="gHT-dy-rW3" id="w4M-Fr-EaG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chO-Sf-Kd7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
