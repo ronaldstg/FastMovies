@@ -20,6 +20,8 @@ class HomeViewController: UIViewController {
         
         var viewController = storyboard.instantiateViewController(withIdentifier: "TopRatedCollectionViewController") as! TopRatedCollectionViewController
         
+        viewController.homeViewModel = self.homeViewModel
+        
         self.add(asChildViewController: viewController, to: topRatedMoviesView)
         
         return viewController
@@ -30,6 +32,8 @@ class HomeViewController: UIViewController {
                
        var viewController = storyboard.instantiateViewController(withIdentifier: "PopularCollectionViewController") as! PopularCollectionViewController
        
+       viewController.homeViewModel = self.homeViewModel
+        
        self.add(asChildViewController: viewController, to: popularMoviesView)
        
        return viewController
@@ -60,7 +64,15 @@ extension HomeViewController {
             .observeOn(MainScheduler.instance)
             .bind(to: popularMoviesCollectionViewController.movies)
             .disposed(by: disposeBag)
-
+        
+        homeViewModel
+            .selectedMovie
+            .bind { (target) in
+                print(target)
+                let controller = MovieDetailsViewController.newInstanceFromStoryboard()
+                self.navigationController?.pushViewController(controller, animated: true)
+        }.disposed(by: disposeBag)
+            
         
         // Mocking data for testing
         let movies:[Movie] = [Movie(id: "1", original_title: "Ad Astra", poster_path: "/xBHvZcjRiWyobQ9kxBhO6B2dtRI.jpg", overview: "Lorem Ipsum"), Movie(id: "1", original_title: "Birds of Prey", poster_path: "/uozb2VeD87YmhoUP1RrGWfzuCrr.jpg", overview: "Lorem Ipsum")];
