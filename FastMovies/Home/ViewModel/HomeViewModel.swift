@@ -17,10 +17,16 @@ class HomeViewModel {
     public let popularMovies : PublishSubject<[Movie]> = PublishSubject()
     public let genresList : PublishSubject<[Genre]> = PublishSubject()
     public let selectedMovie: PublishSubject<Int> = PublishSubject()
+    public let loading: PublishSubject<Bool> = PublishSubject()
     
     public func request() {
         
+        self.loading.onNext(true)
+        
         APIManager.requestTopRated { result in
+            
+            self.loading.onNext(false)
+            
             switch result {
             case .success(let value):
                let json = JSON(value)

@@ -20,6 +20,7 @@
 		480239AD23F23F4100023558 /* GenresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480239AC23F23F4100023558 /* GenresTableViewController.swift */; };
 		480239B023F2427000023558 /* GenresTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480239AE23F2427000023558 /* GenresTableViewCell.swift */; };
 		480239B123F2427000023558 /* GenresTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 480239AF23F2427000023558 /* GenresTableViewCell.xib */; };
+		480239B323F2528800023558 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480239B223F2528800023558 /* UIViewControllerExtensions.swift */; };
 		488C8AB323EA24A3006FED69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488C8AB223EA24A3006FED69 /* AppDelegate.swift */; };
 		488C8ABC23EA24A8006FED69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 488C8ABB23EA24A8006FED69 /* Assets.xcassets */; };
 		488C8ABF23EA24A8006FED69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 488C8ABD23EA24A8006FED69 /* LaunchScreen.storyboard */; };
@@ -68,6 +69,7 @@
 		480239AC23F23F4100023558 /* GenresTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresTableViewController.swift; sourceTree = "<group>"; };
 		480239AE23F2427000023558 /* GenresTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresTableViewCell.swift; sourceTree = "<group>"; };
 		480239AF23F2427000023558 /* GenresTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenresTableViewCell.xib; sourceTree = "<group>"; };
+		480239B223F2528800023558 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		488C8AAF23EA24A3006FED69 /* FastMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		488C8AB223EA24A3006FED69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		488C8ABB23EA24A8006FED69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				480239A423F1AD0B00023558 /* BorderView.swift */,
+				480239B223F2528800023558 /* UIViewControllerExtensions.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				480239B323F2528800023558 /* UIViewControllerExtensions.swift in Sources */,
 				4802399C23F0D93400023558 /* MovieDetailsViewController.swift in Sources */,
 				480239A923F1B92000023558 /* TheMovieDBRouter.swift in Sources */,
 				480239B023F2427000023558 /* GenresTableViewCell.swift in Sources */,

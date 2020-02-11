@@ -72,7 +72,6 @@ extension HomeViewController {
             .bind(to: topRatedCollectionViewController.movies)
             .disposed(by: disposeBag)
         
-        
         homeViewModel
             .popularMovies
             .observeOn(MainScheduler.instance)
@@ -92,7 +91,16 @@ extension HomeViewController {
             .observeOn(MainScheduler.instance)
             .bind(to: genresTableViewController.genres)
             .disposed(by: disposeBag)
-
+        
+        homeViewModel
+            .loading
+            .bind { (status) in
+                if (status) {
+                    self.showLoading(onView: self.view)
+                } else {
+                    self.removeLoading()
+                }
+        }.disposed(by: disposeBag)
     }
 }
 
