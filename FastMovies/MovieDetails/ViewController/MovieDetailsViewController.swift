@@ -64,6 +64,16 @@ extension MovieDetailsViewController {
                 
                 self.movieTitleLabel.text = movie.original_title
         }.disposed(by: disposeBag)
+        
+        movieDetailsViewModel
+            .loading
+            .bind { (status) in
+                if (status) {
+                    self.showLoading(onView: self.view)
+                } else {
+                    self.removeLoading()
+                }
+        }.disposed(by: disposeBag)
     }
 }
 
