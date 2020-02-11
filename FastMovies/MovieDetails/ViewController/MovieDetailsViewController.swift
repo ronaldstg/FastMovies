@@ -19,6 +19,7 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var movieTitleLabel: UILabel!
     @IBOutlet weak var buyButton: UIButton!
+    @IBOutlet weak var overviewLabel: UILabel!
     
     var movieDetailsViewModel = MovieDetailsViewModel()
     let disposeBag = DisposeBag()
@@ -63,6 +64,7 @@ extension MovieDetailsViewController {
                 }
                 
                 self.movieTitleLabel.text = movie.original_title
+                self.overviewLabel.text = movie.overview
         }.disposed(by: disposeBag)
         
         movieDetailsViewModel

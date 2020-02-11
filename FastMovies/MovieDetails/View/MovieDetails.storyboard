@@ -63,11 +63,11 @@
                                         <rect key="frame" x="278" y="0.0" width="136" height="220"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nya-rd-ly9" customClass="BorderView" customModule="FastMovies" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="126" height="36"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="126" height="24"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdf-A2-4Gk">
-                                                        <rect key="frame" x="19.5" y="4" width="87" height="28"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <rect key="frame" x="22.5" y="-1.5" width="81" height="27"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <state key="normal" title="R$ 44.90 BUY"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -84,7 +84,7 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="36" id="FEc-rE-Obu"/>
+                                                    <constraint firstAttribute="height" constant="24" id="FEc-rE-Obu"/>
                                                     <constraint firstItem="jdf-A2-4Gk" firstAttribute="centerY" secondItem="nya-rd-ly9" secondAttribute="centerY" id="J4d-Mw-M60"/>
                                                     <constraint firstItem="jdf-A2-4Gk" firstAttribute="centerX" secondItem="nya-rd-ly9" secondAttribute="centerX" id="u6K-YI-lc0"/>
                                                 </constraints>
@@ -101,11 +101,11 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOo-ae-8bK" customClass="BorderView" customModule="FastMovies" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="46" width="126" height="36"/>
+                                                <rect key="frame" x="0.0" y="34" width="126" height="24"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5Y-Gm-sOJ">
-                                                        <rect key="frame" x="20" y="4" width="86" height="28"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <rect key="frame" x="23" y="-1.5" width="80" height="27"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <state key="normal" title="R$ 4.90 RENT"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -122,7 +122,7 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="36" id="2hN-1J-pck"/>
+                                                    <constraint firstAttribute="height" constant="24" id="2hN-1J-pck"/>
                                                     <constraint firstItem="A5Y-Gm-sOJ" firstAttribute="centerY" secondItem="aOo-ae-8bK" secondAttribute="centerY" id="GgJ-af-K3J"/>
                                                     <constraint firstItem="A5Y-Gm-sOJ" firstAttribute="centerX" secondItem="aOo-ae-8bK" secondAttribute="centerX" id="OxD-pD-J23"/>
                                                 </constraints>
@@ -172,16 +172,25 @@
                                     <constraint firstAttribute="height" constant="1" id="qu7-bD-C5B"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3XU-LH-luD">
+                                <rect key="frame" x="10" y="526" width="394" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="s6y-9x-Srq" firstAttribute="top" secondItem="SHs-iI-0qN" secondAttribute="top" id="1kD-ax-z6t"/>
+                            <constraint firstItem="3XU-LH-luD" firstAttribute="top" secondItem="2ru-27-i42" secondAttribute="bottom" constant="20" id="5FG-NN-tsC"/>
                             <constraint firstItem="s6y-9x-Srq" firstAttribute="trailing" secondItem="SHs-iI-0qN" secondAttribute="trailing" id="67X-BE-ZHp"/>
                             <constraint firstItem="SHs-iI-0qN" firstAttribute="leading" secondItem="s6y-9x-Srq" secondAttribute="leading" id="FNC-5P-d6x"/>
                             <constraint firstItem="3Gt-xS-9Cz" firstAttribute="top" secondItem="SHs-iI-0qN" secondAttribute="bottom" constant="10" id="GI4-rA-wKy"/>
                             <constraint firstItem="2ru-27-i42" firstAttribute="top" secondItem="3Gt-xS-9Cz" secondAttribute="bottom" constant="-31.5" id="NmC-DS-gj3"/>
                             <constraint firstItem="2ru-27-i42" firstAttribute="leading" secondItem="s6y-9x-Srq" secondAttribute="leading" constant="4" id="UYp-W3-liW"/>
                             <constraint firstItem="s6y-9x-Srq" firstAttribute="trailing" secondItem="3Gt-xS-9Cz" secondAttribute="trailing" id="V2T-GT-rC0"/>
+                            <constraint firstItem="s6y-9x-Srq" firstAttribute="trailing" secondItem="3XU-LH-luD" secondAttribute="trailing" constant="10" id="fCg-Ag-ded"/>
+                            <constraint firstItem="3XU-LH-luD" firstAttribute="leading" secondItem="s6y-9x-Srq" secondAttribute="leading" constant="10" id="oeb-cv-Iyo"/>
                             <constraint firstItem="3Gt-xS-9Cz" firstAttribute="leading" secondItem="s6y-9x-Srq" secondAttribute="leading" id="vDL-bg-iTU"/>
                             <constraint firstItem="s6y-9x-Srq" firstAttribute="trailing" secondItem="2ru-27-i42" secondAttribute="trailing" constant="4" id="xfs-9p-W7l"/>
                         </constraints>
@@ -192,6 +201,7 @@
                         <outlet property="backdropImageView" destination="SHs-iI-0qN" id="dsq-hf-ROj"/>
                         <outlet property="buyButton" destination="jdf-A2-4Gk" id="PbH-nV-mpY"/>
                         <outlet property="movieTitleLabel" destination="STg-Xb-eXT" id="yat-3a-qYH"/>
+                        <outlet property="overviewLabel" destination="3XU-LH-luD" id="8P7-WL-wbc"/>
                         <outlet property="posterImageView" destination="gHT-dy-rW3" id="w4M-Fr-EaG"/>
                     </connections>
                 </viewController>
