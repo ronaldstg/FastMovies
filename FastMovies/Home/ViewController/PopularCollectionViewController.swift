@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 
-class PopularCollectionViewController: UIViewController {
+class PopularCollectionViewController: UIViewController, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var popularCollectionView: UICollectionView!
     
@@ -21,7 +21,16 @@ class PopularCollectionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        popularCollectionView.delegate = self
         bind()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 150, height: 290)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
 }
