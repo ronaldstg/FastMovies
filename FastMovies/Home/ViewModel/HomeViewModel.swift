@@ -15,6 +15,7 @@ class HomeViewModel {
     
     public let topRatedMovies : PublishSubject<[Movie]> = PublishSubject()
     public let popularMovies : PublishSubject<[Movie]> = PublishSubject()
+    public let genresList : PublishSubject<[Genre]> = PublishSubject()
     public let selectedMovie: PublishSubject<Int> = PublishSubject()
     
     public func request() {
@@ -46,5 +47,19 @@ class HomeViewModel {
                 print(error)
             }
         }
+        
+        APIManager.requestGenresList { result in
+            switch result {
+            case .success(let value):
+               let json = JSON(value)
+
+               let genres = json["genres"].arrayValue.compactMap {return Genre(data: try! $0.rawData())}
+               self.genresList.onNext(genres)
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
     }
 }

@@ -54,5 +54,18 @@ class APIManager {
                        completion(ApiResult.failure(error))
                }
            }
-       }
+    }
+    
+    static func requestGenresList(completion: @escaping (ApiResult) -> Void) {
+     Alamofire.request(TheMovieDBRouter.genresList).responseJSON { response in
+            switch response.result {
+                case .success(let value):
+                    let json = JSON(value)
+                    completion(ApiResult.success(json))
+                case .failure(let error):
+                    print(error)
+                    completion(ApiResult.failure(error))
+            }
+        }
+    }
 }

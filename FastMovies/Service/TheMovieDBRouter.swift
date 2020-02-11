@@ -17,11 +17,12 @@ public enum TheMovieDBRouter: URLRequestConvertible {
     case latest
     case top_rated
     case popular
+    case genresList
     case details(String)
     
     var method: HTTPMethod {
       switch self {
-      case .latest,.top_rated, .popular, .details:
+      case .latest,.top_rated, .popular, .genresList, .details:
         return .get
       }
     }
@@ -34,6 +35,8 @@ public enum TheMovieDBRouter: URLRequestConvertible {
         return "/movie/top_rated"
       case .popular:
         return "/movie/popular"
+      case .genresList:
+        return "/genre/movie/list"
       case .details(let movieId):
         return "/movie/\(movieId)"
       }

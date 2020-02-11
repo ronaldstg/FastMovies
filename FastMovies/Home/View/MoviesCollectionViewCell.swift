@@ -33,7 +33,7 @@ class MoviesCollectionViewCell: UICollectionViewCell {
     }
     
     override func prepareForReuse() {
-        //
+        posterImageView.image = UIImage()
     }
     
 }
