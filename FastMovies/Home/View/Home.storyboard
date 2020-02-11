@@ -98,8 +98,8 @@
                                                 </constraints>
                                                 <viewLayoutGuide key="safeArea" id="urU-Sw-EuB"/>
                                             </view>
-                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7W-Q3-wBh" userLabel="Genres View">
-                                                <rect key="frame" x="0.0" y="752" width="414" height="298"/>
+                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7W-Q3-wBh" userLabel="Quick Links View">
+                                                <rect key="frame" x="0.0" y="752" width="414" height="498"/>
                                                 <connections>
                                                     <segue destination="uZp-dm-1cy" kind="embed" id="605-Qh-9CC"/>
                                                 </connections>
@@ -113,7 +113,7 @@
                                             <constraint firstItem="DD0-Lc-Jev" firstAttribute="leading" secondItem="LYV-VO-0x4" secondAttribute="leading" id="9xB-bL-BH4"/>
                                             <constraint firstAttribute="trailing" secondItem="f7W-Q3-wBh" secondAttribute="trailing" id="BcB-W8-LnV"/>
                                             <constraint firstAttribute="trailing" secondItem="Ktc-RK-vkM" secondAttribute="trailing" id="Eor-Eq-EXI"/>
-                                            <constraint firstAttribute="bottom" secondItem="f7W-Q3-wBh" secondAttribute="bottom" constant="200" id="GHx-7L-HFw"/>
+                                            <constraint firstAttribute="bottom" secondItem="f7W-Q3-wBh" secondAttribute="bottom" id="GHx-7L-HFw"/>
                                             <constraint firstAttribute="trailing" secondItem="bzP-qB-Eb6" secondAttribute="trailing" id="KPz-Hn-S9J"/>
                                             <constraint firstAttribute="height" constant="1250" id="N6E-Cm-UAh"/>
                                             <constraint firstItem="FT1-TE-l7C" firstAttribute="leading" secondItem="LYV-VO-0x4" secondAttribute="leading" id="RcH-cc-Nmi"/>
@@ -163,6 +163,7 @@
                     <size key="freeformSize" width="414" height="1900"/>
                     <connections>
                         <outlet property="popularMoviesView" destination="DD0-Lc-Jev" id="5dg-MU-00O"/>
+                        <outlet property="quickLinksView" destination="f7W-Q3-wBh" id="y4P-2Y-4Zx"/>
                         <outlet property="topRatedMoviesView" destination="g75-hb-0NK" id="gAZ-ed-XcD"/>
                     </connections>
                 </viewController>
@@ -263,36 +264,17 @@
             </objects>
             <point key="canvasLocation" x="786.95652173913049" y="114.50892857142857"/>
         </scene>
-        <!--View Controller-->
+        <!--Genres Table View Controller-->
         <scene sceneID="Tuw-je-6eT">
             <objects>
-                <viewController id="uZp-dm-1cy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GenresTableViewController" id="uZp-dm-1cy" customClass="GenresTableViewController" customModule="FastMovies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5ba-WU-v4Z">
                         <rect key="frame" x="0.0" y="0.0" width="406" height="228"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G7Q-Rr-1jR">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="48" estimatedRowHeight="48" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G7Q-Rr-1jR">
                                 <rect key="frame" x="0.0" y="0.0" width="406" height="228"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="sGH-2i-Zph">
-                                        <rect key="frame" x="0.0" y="28" width="406" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sGH-2i-Zph" id="Kzn-i2-8CD">
-                                            <rect key="frame" x="0.0" y="0.0" width="406" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2z-XP-cYe">
-                                                    <rect key="frame" x="32" y="11" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -302,8 +284,12 @@
                             <constraint firstItem="G7Q-Rr-1jR" firstAttribute="leading" secondItem="5ba-WU-v4Z" secondAttribute="leading" id="f3x-wP-OTm"/>
                             <constraint firstAttribute="bottom" secondItem="G7Q-Rr-1jR" secondAttribute="bottom" id="vrb-Pz-jjm"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="qiD-cw-Xmf"/>
                     </view>
                     <size key="freeformSize" width="406" height="228"/>
+                    <connections>
+                        <outlet property="genresTableView" destination="G7Q-Rr-1jR" id="G6o-GI-LtA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbe-V8-EhS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -25,8 +25,8 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gAN-fr-IHm">
-                    <rect key="frame" x="0.0" y="0.5" width="300" height="219"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gAN-fr-IHm">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="220"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="300" id="UKY-FB-5mk"/>
                         <constraint firstAttribute="height" constant="220" id="jnK-7q-Ruw"/>
@@ -55,7 +55,4 @@
             <point key="canvasLocation" x="137.68115942028987" y="171.42857142857142"/>
         </view>
     </objects>
-    <resources>
-        <image name="person.circle" catalog="system" width="64" height="60"/>
-    </resources>
 </document>

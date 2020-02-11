@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var topRatedMoviesView: UIView!
     @IBOutlet weak var popularMoviesView: UIView!
+    @IBOutlet weak var quickLinksView: UIView!
     
     private lazy var topRatedCollectionViewController: TopRatedCollectionViewController = {
         let storyboard = UIStoryboard(name: "Home", bundle: Bundle.main)
@@ -35,6 +36,18 @@ class HomeViewController: UIViewController {
        viewController.homeViewModel = self.homeViewModel
         
        self.add(asChildViewController: viewController, to: popularMoviesView)
+       
+       return viewController
+    }()
+    
+    private lazy var genresTableViewController: GenresTableViewController = {
+        let storyboard = UIStoryboard(name: "Home", bundle: Bundle.main)
+               
+       var viewController = storyboard.instantiateViewController(withIdentifier: "GenresTableViewController") as! GenresTableViewController
+       
+       viewController.homeViewModel = self.homeViewModel
+        
+       self.add(asChildViewController: viewController, to: quickLinksView)
        
        return viewController
     }()
@@ -73,6 +86,13 @@ extension HomeViewController {
                 controller.movieId = movieId
                 self.navigationController?.pushViewController(controller, animated: true)
         }.disposed(by: disposeBag)
+        
+        homeViewModel
+            .genresList
+            .observeOn(MainScheduler.instance)
+            .bind(to: genresTableViewController.genres)
+            .disposed(by: disposeBag)
+
     }
 }
 
