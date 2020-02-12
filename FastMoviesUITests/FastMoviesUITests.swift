@@ -40,4 +40,24 @@ class FastMoviesUITests: XCTestCase {
             }
         }
     }
+    
+    func testMovieSelection() {
+        let app = XCUIApplication()
+        app.launch()
+        
+
+        let elementsQuery = app.scrollViews.otherElements
+        let collectionViewsQuery = elementsQuery.collectionViews
+
+        
+        let firstChild = collectionViewsQuery.cells.children(matching: .other).element(boundBy: 0)
+     
+        let pred = NSPredicate(format: "exists == true")
+        let exp = expectation(for: pred, evaluatedWith: firstChild, handler:nil)
+        let res = XCTWaiter.wait(for: [exp], timeout: 7.0)
+        XCTAssert(res == XCTWaiter.Result.completed, "Failed time out waiting for movie cells")
+
+        firstChild.tap()
+        
+    }
 }
