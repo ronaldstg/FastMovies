@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--FastMovies-->
         <scene sceneID="wxi-5J-AwO">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="wtJ-G9-Ut6" customClass="HomeViewController" customModule="FastMovies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" title="FastMovies" id="wtJ-G9-Ut6" customClass="HomeViewController" customModule="FastMovies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1gd-xf-KUa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,7 +159,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zrp-wL-Gky"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Yxw-3A-kLn"/>
+                    <navigationItem key="navigationItem" title="FastMovies" id="Yxw-3A-kLn"/>
                     <size key="freeformSize" width="414" height="1900"/>
                     <connections>
                         <outlet property="popularMoviesView" destination="DD0-Lc-Jev" id="5dg-MU-00O"/>
@@ -254,6 +254,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="358-vK-eJV">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
