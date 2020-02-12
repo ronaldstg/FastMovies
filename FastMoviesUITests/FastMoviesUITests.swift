@@ -59,5 +59,16 @@ class FastMoviesUITests: XCTestCase {
 
         firstChild.tap()
         
+        let detailsNavigationBar = app.navigationBars["Details"]
+        XCTAssert(detailsNavigationBar.exists, "Failed to show movie details")
+        
+        let movieTitle = app.staticTexts.element(matching: .any, identifier: "Movie Title")
+        XCTAssert(movieTitle.exists, "Failed to find movie title label")
+        
+        let textPred = NSPredicate(format: "label != %@","Movie Title")
+        let movieTitleSetExpectation = expectation(for: textPred, evaluatedWith: movieTitle, handler: nil)
+        let movieTitleResult = XCTWaiter.wait(for: [movieTitleSetExpectation], timeout: 7.0)
+        XCTAssert(movieTitleResult == XCTWaiter.Result.completed, "Failed to load selected movie")
+
     }
 }

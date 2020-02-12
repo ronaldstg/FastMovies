@@ -44,6 +44,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STg-Xb-eXT">
                                                 <rect key="frame" x="10" y="10" width="120" height="18"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="Movie Title"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="Zsx-uG-pNW"/>
                                                 </constraints>
