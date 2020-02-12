@@ -34,7 +34,12 @@ private extension GenresTableViewController {
 
     private func bind() {
         
-        genresTableView.register(UINib(nibName: "GenresTableViewCell", bundle: nil), forCellReuseIdentifier: String(describing: GenresTableViewCell.self))
+        let dark_mode = Bundle.main.infoDictionary?["dark_mode"] as! String
+        if (dark_mode == "YES") {
+            genresTableView.register(UINib(nibName: "GenresTableDarkViewCell", bundle: nil), forCellReuseIdentifier: String(describing: GenresTableViewCell.self))
+        } else {
+            genresTableView.register(UINib(nibName: "GenresTableViewCell", bundle: nil), forCellReuseIdentifier: String(describing: GenresTableViewCell.self))
+        }
         
         genres.bind(to: genresTableView.rx.items(cellIdentifier: "GenresTableViewCell", cellType: GenresTableViewCell.self)) {  (row,genre,cell) in
             cell.genre = genre

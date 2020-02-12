@@ -39,8 +39,13 @@ private extension PopularCollectionViewController {
         
     private func bind() {
         
-        popularCollectionView.register(UINib(nibName: "MoviesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: String(describing: MoviesCollectionViewCell.self))
-        
+        let dark_mode = Bundle.main.infoDictionary?["dark_mode"] as! String
+        if (dark_mode == "YES") {
+            popularCollectionView.register(UINib(nibName: "MoviesCollectionDarkViewCell", bundle: nil), forCellWithReuseIdentifier: String(describing: MoviesCollectionViewCell.self))
+        } else {
+            popularCollectionView.register(UINib(nibName: "MoviesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: String(describing: MoviesCollectionViewCell.self))
+        }
+                
         movies.bind(to: popularCollectionView.rx.items(cellIdentifier: "MoviesCollectionViewCell", cellType: MoviesCollectionViewCell.self)) { (row, movie, cell) in
             cell.movie = movie
         }.disposed(by: disposeBag)

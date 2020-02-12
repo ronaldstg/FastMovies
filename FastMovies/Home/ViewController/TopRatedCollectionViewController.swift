@@ -38,7 +38,12 @@ private extension TopRatedCollectionViewController {
         
     private func bind() {
         
-        topRatedCollectionView.register(UINib(nibName: "MoviesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: String(describing: MoviesCollectionViewCell.self))
+        let dark_mode = Bundle.main.infoDictionary?["dark_mode"] as! String
+        if (dark_mode == "YES") {
+            topRatedCollectionView.register(UINib(nibName: "MoviesCollectionDarkViewCell", bundle: nil), forCellWithReuseIdentifier: String(describing: MoviesCollectionViewCell.self))
+        } else {
+            topRatedCollectionView.register(UINib(nibName: "MoviesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: String(describing: MoviesCollectionViewCell.self))
+        }
         
         movies.bind(to: topRatedCollectionView.rx.items(cellIdentifier: "MoviesCollectionViewCell", cellType: MoviesCollectionViewCell.self)) { (row, movie, cell) in
             cell.movie = movie
