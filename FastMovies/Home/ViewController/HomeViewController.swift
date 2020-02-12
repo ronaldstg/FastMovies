@@ -57,6 +57,12 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let dark_mode = Bundle.main.infoDictionary?["dark_mode"] as! String
+        if (dark_mode == "YES") {
+            overrideUserInterfaceStyle = .dark
+        }
+        
         bind()
         homeViewModel.request()
     }

@@ -6,8 +6,40 @@
 	<dict>
 		<key>FastMovies.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>9</integer>
+		</dict>
+		<key>FastMoviesDark.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>483A097723F419C8004641B5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>488C8AAE23EA24A3006FED69</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>488C8AC423EA24A8006FED69</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>488C8ACF23EA24A9006FED69</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
